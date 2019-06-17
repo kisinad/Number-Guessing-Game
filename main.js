@@ -10,7 +10,11 @@ else
 for(var count=1;count<=10;count++)
 {
 		let num = prompt ("Please enter a number:"); //Captures user input
-	if (num==i){
+	if (num<1 || num>100){
+		alert("Out of range");
+	}
+
+	if (num===i){
 		alert("You WIN!");
 		break;
 	}
