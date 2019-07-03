@@ -1,7 +1,8 @@
 //Number Guessing Game
-var i = Math.floor(Math.random() * 100) + 1; //Generates random numbers and stores it in i
-
-var j=i%2; //gets the modulus and stores the result in j
+// Array.from({length: 100}, () => Math.floor(Math.random() * 100));
+// var y = Math.floor(Math.random() * 100) + 1; //Generates random numbers and stores it in i
+var y = Array.from({length: 100}, () => Math.floor(Math.random() * 100));
+var j=y%2; //gets the modulus and stores the result in j
 if (j==0) //Conitioin checks to see if the result in module is zero or not
 	alert (" Number is Even"); 
 else 
@@ -14,19 +15,19 @@ for(var count=1;count<=10;count++)
 		alert("Out of range");
 	}
 
-	if (num===i){
+	if (num==y){
 		alert("You WIN!");
 		break;
 	}
-	if (num<i){
+	if (num<y){
 		alert("Number is lower, make another guess");
 	}
-	if (num>i){
+	if (num>y){
 				alert("Number is higher,make another guess");
 			}
 	if (count==10){	
 			alert("You LOSE!");}
-}
+};
 
 
 
